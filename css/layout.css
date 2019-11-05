@@ -1,0 +1,94 @@
+#wrap{position:relative;}
+.ex{width:1200px;position:absolute;top:0;left:50%;margin-left:-600px;opacity:.5;z-index:999;height:310px;}
+
+/* 헤더 */
+#header{border-bottom:1px solid #e5e5e5;transition:all 0.3s;}
+#header .inner .m_btn_area{display:none;}
+#header .inner{width:1200px;margin:0 auto;background-color:#fff;height:80px;position:relative;font-size:0;}
+#header .inner h1.logo{display: inline-block;margin-top:13px;}
+#header .inner h1.logo a{display:block;}
+#header .inner h2{display:none;}
+#header .inner .nav{display: inline-block;font-size:0;vertical-align:top;padding-left:189px;width:calc(100% - 91px);}
+#header .inner .nav ul{display: inline-block;}
+#header .inner .nav li{display: inline-block;padding-right:46px;}
+#header .inner .nav li a{font-size:18px;color:#282828;font-weight:300;letter-spacing: -0.006em;line-height:80px;display:block;}
+#header .inner .nav li.on a{color:#0162db;font-weight:600;}
+#header .inner .btn_area{float:right;padding-top:24px;}
+#header .inner .btn_area .btn{display: inline-block;border:1px solid #bfbfbf;padding:6px 13px;}
+#header .inner .btn_area .btn span{display: inline-block;font-size:14px;color:#9c9c9c;font-weight:200;background-repeat:no-repeat;background-position:left center;}
+#header .inner .btn_area .btn.admin span{padding-left:20px;background-image: url("../images/common/admin_btnico.png");}
+
+/* 서브 */
+.sub_wrap .container{background-color:#f8f8f8;}
+.sub_wrap .container .inner-container{width:1200px;margin:0 auto;padding-bottom:146px }
+.sub_wrap .container .inner-container .sub_tit{font-size:0;text-align:center;padding:67px 0;}
+.sub_wrap .container .inner-container .sub_tit h2{text-align:center;font-size:38px;color:#282828;font-weight:300;line-height:normal;display: inline-block}
+
+/* 페이징 */
+.pagination{margin-top:60px;white-space: nowrap; text-align: center; height:32px; line-height:32px; font-size:0;}
+.pagination a{display:inline-block;font-weight:300; height:32px; width:33px; line-height:31px;border:1px solid #d1d2d3; vertical-align:middle; margin:0 2px;text-align:center;font-size:14px; color:#d1d1d1;border-radius:3px;}
+.pagination .on{color:#fff;background-color: #0162db; border:1px solid #0162db;border-right: 2px;}
+.pagination .prev,.pagination .next{width:auto;height:32px;background-repeat:no-repeat;overflow:hidden;position:relative;font-size:0;border:0;line-height:32px;margin:0 16px;}
+.pagination a span{display: inline-block;position:relative;height:32px;width:10px;}
+.pagination a span::after{content:"";display:block;position:absolute;top:0;width:10px;height:100%;background-repeat:no-repeat;background-image:url("../images/common/paging_arr.gif");background-position: center;}
+.pagination .prev span::after{left:0;}
+.pagination .next span::after{ right:0;transform: rotate(180deg)}
+
+#left_modal{display: inline-block}
+
+/* 푸터 */
+footer{background-color:#434343;}
+footer p{text-align:center;font-size:15px;line-height:90px;font-weight:100;color:#fff;}
+
+@media only screen and (min-width : 0px) and (max-width : 1280px) {
+    #header .inner{width:100%;padding:0 20px;text-align:center;}
+    #header .inner h1.logo{float:left;}
+    #header .inner .nav{padding-left:0;}
+    #header .inner .nav li{padding:0 20px}
+    .sub_wrap .container .inner-container{width:100%;padding:0 20px 120px;}
+}
+
+@media only screen and (min-width : 0px) and (max-width : 1024px) {
+    #header .inner h1.logo{width:60px;height:80px;margin:0;text-align:center;}
+    #header .inner h1.logo a{display:inline-block;width:100%;line-height:80px;}
+    #header .inner .nav{width:calc(100% - 60px)}
+    #header .inner .nav li a{font-size:15px;}
+}
+
+@media only screen and (min-width : 0px) and (max-width : 799px) {
+    .sub_wrap .container .inner-container{width:100%;padding:0 15px 120px;}
+
+    body.leftOpen{overflow:hidden;}
+    body.leftOpen .left_close{opacity:1; transition:all 0.5s; z-index:901;}
+    body.leftOpen #header .inner .nav{right:0; transition:all 0.5s; z-index:901;}
+    body.leftOpen #left_modal{opacity:1; z-index:901; transition:all 0.5s;left:0;right:0;}
+
+    #left_modal{position:fixed;top:0;right:-100%; bottom:0; background:rgba(0,0,0,.65); z-index:-1; opacity:0; transition:all 0.5s;}
+    #header{position:fixed;width:100%;height:56px;left:0;top:0;z-index:998}
+    .container_wrap{padding-top:56px;z-index:10;}
+    #header .inner{height:56px;padding:0;width:100%;}
+    #header .inner h1.logo{width:60px;height:56px;margin:0;text-align:right;}
+    #header .inner h1.logo a{display:inline-block;width:45px;height:56px;line-height:56px;}
+    #header .inner h2{display:inline-block;font-size:24px;color:#024ca9;text-align:center;vertical-align:middle;width: calc(100% - 131px);float:left;line-height:56px;padding-left:15px;}
+    #header .inner .m_btn_area{display:block;width:56px;height:56px;padding:0;position:absolute;top:0;right:0;}
+    #header .inner .m_btn_area .m_btn{display:block;width:100%;height:100%;background-image: url("../images/common/m_menu.png");background-repeat:no-repeat;background-position:center;background-size:auto 19px;}
+    #header .inner .nav{position:fixed;width:100%;height:100%;top:0;right:-100%; z-index:-1;transition:all 0.5s; }
+    #header .inner .nav .left_container{width:100%;padding-left:100px;height:100%;position:relative;overflow:hidden;}
+    #header .inner .nav .left_container .left_inner{width:100%;height:100%;background:#fff;overflow-y:auto;-webkit-overflow-scrolling:touch;position:relative;padding-top:56px;}
+    #header .inner .nav .left_container .close_btn{font-size:0;position:absolute;display:block;top:0;left:52px;width:48px;height:48px;background-image: url("../images/common/menu_close.png");background-repeat:no-repeat;background-size:18px;background-position:center;}
+    #header .inner .btn_area{padding:16px 15px;position:absolute;top:0;right:0;width:100%;border-bottom:1px solid #d2d2d2;text-align:right;}
+    #header .inner .btn_area .btn{padding: 3px 7px}
+    #header .inner .btn_area .btn span{font-size:10px;}
+    #header .inner .btn_area .btn.admin span{background-size:8px auto;padding-left:14px;}
+    #header .inner .nav{text-align:left;}
+    #header .inner .nav ul{display:block;padding-top:15px;}
+    #header .inner .nav li{display:block;padding:10px 0;}
+    #header .inner .nav li a{line-height:16px;padding:0 20px;font-size:16px;}
+    #header .inner .nav li.on a{}
+
+    .sub_wrap .container .inner-container .sub_tit{padding:33px 0;}
+    .sub_wrap .container .inner-container .sub_tit h2{font-size:22px;line-height:22px;}
+
+    footer p{font-size:10px;line-height:45px;}
+}
+
